@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block content %}
+<article>
+    <h2>{{ post.title }}</h2>
+    <p><strong>Author:</strong> {{ post.author }}</p>
+    <p><strong>Date Posted:</strong>{{ post.date_posted.strftime('%Y-%m-%d %H:%M:%S') }}</p>
+    {% for paragraph in post.content.split('\n') %}
+    {% if paragraph %}
+    <p>{{ paragraph }} </p>
+    {% endif %}
+    {% endfor %}
+</article>
+{% endblock %}

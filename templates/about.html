@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %}About{% endblock %}
+
+{% block content %}
+<h2>About This Blog</h2>
+<p>Welcome to our blog! This platform is designed to share insights, ideas, and stories on various topics ranging from technology to lifestyle.</p>
+<p>We aim to provide engaging and informative content that adds value to our readers. Whether you're here to learn, explore, or just enjoy some good reading, we hope you find something that inspires you.</p>
+<p>Thank you for visiting, and feel free to reach out through the <a href="{{ url_for('home') }}">homepage</a> or browse through our <a href="{{ url_for('home') }}">posts</a> to discover more!</p>
+{% endblock %}

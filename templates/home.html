@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}All Post{% endblock %}
+
+{% block content %}
+<h2>All Post</h2>
+<section class ="post">
+    {% for post in posts %}
+    <article class = "post">
+        <h2><a href="{{ url_for('post_details',id=post.id) }}">{{ post.title }}</a>
+        </h2>
+        <p class="meta">By {{ post.author }} on {{ post.date_posted.strftime('%Y-%m-%d %H:%M:%S') }}
+        </p>
+        <p>{{ post.content.split('\n')[:3]|join('\n') }}</p>
+        <div>
+            <p>
+        <h2><a href="{{ url_for('edit_post',id=post.id) }}">Update</a>
+        <h2><a href="{{ url_for('delete_post',id=post.id) }}">Delete</a>
+          <div class = "text-end">
+            <a class=" btn btn-success btn-sm"
+         href="{{ url_for('post_details',id=post.id) }}"role="button">Read More</a>
+
+          </div>  
+            </p>
+        </div>
+        <hr>
+    </article> 
+    {% endfor %}
+</section>
+{% endblock %}

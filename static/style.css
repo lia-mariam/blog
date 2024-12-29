@@ -1,0 +1,225 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.8;
+    color: #2c3e50;
+    background-color: #f9fbfc;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+    background: #FF7F50; /* Orange */
+    color: #f9fbfc;
+    padding: 20px 0;
+    text-align: center;
+    animation: fadeIn 2s ease-out;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #3F51B5; /* Indigo */
+}
+
+header p {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-around;
+    background: #009688; /* Teal */
+    padding: 15px 0;
+    border-bottom: 4px solid #004d40;
+    flex-wrap: wrap; /* Allow wrapping for better responsiveness */
+    animation: slideIn 1.5s ease-out;
+}
+
+nav a {
+    color: #f9fbfc;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    color: #ffeb3b; /* Yellowish-Teal */
+    background-color: #3F51B5; /* Indigo */
+    cursor: pointer;
+    transform: scale(1.1); /* Hover scale effect */
+}
+
+/* Main Content */
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 25px;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    animation: fadeIn 2s ease-out;
+}
+
+main h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    color: #3F51B5; /* Indigo */
+    border-bottom: 2px solid #009688; /* Teal */
+    padding-bottom: 5px;
+}
+
+main p {
+    margin: 15px 0;
+    line-height: 1.8;
+    color: #34495e;
+}
+
+/* Sidebar */
+.sidebar {
+    margin: 30px auto;
+    max-width: 1000px;
+    padding: 20px;
+    background: #80deea; /* Light Teal */
+    border-left: 6px solid #009688; /* Teal */
+    border-radius: 5px;
+    animation: fadeIn 2s ease-out;
+}
+
+.sidebar h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #3F51B5; /* Indigo */
+}
+
+.sidebar ul {
+    list-style-type: square;
+    padding-left: 20px;
+    color: #34495e;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #009688; /* Teal */
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+    color: #FF7F50; /* Orange */
+    background-color: #80deea; /* Light Teal */
+    padding: 3px 5px;
+    border-radius: 3px;
+    transform: scale(1.1); /* Hover scale effect */
+}
+
+/* Update and Delete Buttons */
+button.update, button.delete {
+    font-size: 0.8rem; /* Very smaller size for buttons */
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button.update {
+    background-color: #FF7F50; /* Orange */
+    color: #fff;
+}
+
+button.update:hover {
+    background-color: #FF5722; /* Darker Orange */
+    transform: scale(1.1);
+}
+
+button.delete {
+    background-color: #E74C3C;
+    color: #fff;
+}
+
+button.delete:hover {
+    background-color: #C0392B;
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #3F51B5; /* Indigo */
+    color: #f9fbfc;
+    padding: 15px 0;
+    margin-top: 40px;
+    border-top: 4px solid #009688; /* Teal */
+    animation: fadeIn 2s ease-out;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+footer a {
+    color: #FFEB3B; /* Yellowish-Teal */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #FF7F50; /* Orange */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 10px 0;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    .sidebar {
+        padding: 15px;
+    }
+}
